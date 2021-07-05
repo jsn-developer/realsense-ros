@@ -673,7 +673,7 @@ void BaseRealSenseNode::setupPublishers()
 
             if (stream == DEPTH && _pointcloud)
             {
-                _pointcloud_publisher = _node_handle.advertise<sensor_msgs::PointCloud2>("depth/color/points", 1);
+                _pointcloud_publisher = _node_handle.advertise<sensor_msgs::PointCloud2>("/points_raw", 1);
             }
         }
     }
